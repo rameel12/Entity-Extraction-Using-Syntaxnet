@@ -63,59 +63,6 @@ def TAG(j):
     d = ast.literal_eval(p)
     return d
 
-def get_verb(par):
-    
-    ver= []
-    for j in par.token:
-        s = TAG(j.tag)
-        if 'VER' in s['fPOS']:
-            ver.append(j.word)
-    return ver
-
-def get_events(m,verb,ent):
-
-    g = 0
-    done = []
-    tup = []
-    for i,s in enumerate(verb):
-        #print s, i
-        pred = []
-        end = m.find(s+ ' ')+len(s)
-        span_subject = m[g:end]
-
-        if i<len(verb)-1:
-            end2 = m.find(verb[i+1]+ ' ')+len(verb[i+1])
-
-        else:
-            end2 = len(m)-1
-        span_object = m[end:end2]
-        #print span_object,span_subject, ' GHALLLLLLLLLLLLLLLLLL'
-        #print span_subject, s, span_object
-        rec = get_s(span_subject,ent,0)
-        if rec:
-            pred.append(rec)
-        pred.append(s)
-        #print span_object, 'ONB'
-        #print span_object, 'SPANNNNNNNNNN'
-        rec = get_s(span_object,ent,1)
-        if rec:
-            #print span_object,rec
-            pred.append(rec)
-        #print tuple(pred)
-        tup.append(tuple(pred))
-
-
-        g = end
-        #print subm
-    return tup
-    #print m[g:]
-
-def get_mark(par):
-    b = []
-    for y in par.token:
-        if 'mark' in y.label:
-            b.append(y.word)
-    return b
 
 def NER(tex):
     included = []
