@@ -32,7 +32,7 @@ Numpy
   - Name (Name of a particular noun)
 - Conjunctions will result in multiple entities.
 
-# Results
+## Performance
 
 Following are few results of Syntaxnet comparied with Spacy Noun Chunks
 
