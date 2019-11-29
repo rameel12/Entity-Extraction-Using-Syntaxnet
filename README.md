@@ -24,6 +24,66 @@ Pandas
 
 Numpy
 
+## Syntaxnet Installation steps
+
+Setting up Syntaxnet is a complicated task. There is a lot to do apart from what is mentioned in their wiki.
+
+Following are the instructions to setup Syntaxnet on your machine
+
+- Install python 2.7: (Can be installed separately or with anaconda)
+- If tensorflow is installed, uninstall it:
+
+-
+  - _sudo pip uninstall tensorflow_
+- Download **bazel 0.5.2**
+- Run the following command:
+  - _chmod +x bazel-0.5.2- installer…. (as per your file name).sh_
+  - _./bazel(as per file name).sh –user_
+  - _export PATH = &quot;$PATH:$HOME/bin&quot;_
+- Check if bazel is installed:
+  - _bazel version_
+- Install Homebrew for IOS with the following command:
+  - _/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;_
+- Install swig
+  - _brew install swig_ on OS(X)
+- protocol buffers, with a version supported by TensorFlow:
+  - _check your protobuf version with pip freeze | grep protobuf_
+  - _upgrade to a supported version with pip install -U protobuf==3.3.0_
+- autograd, with a version supported by TensorFlow:
+  - _pip install -U autograd==1.1.13_
+- mock, the testing package:
+  - _pip install mock_
+- asciitree, to draw parse trees on the console for the demo:
+  - _pip install asciitree_
+- numpy, package for scientific computing:
+  - _pip install numpy_
+- pygraphviz to visualize traces and parse trees:
+  - _apt-get install -y graphviz libgraphviz-dev_
+  - _pip install pygraphviz --install-option=&quot;--include-path=/usr/include/graphviz&quot; --install-option=&quot;--library-path=/usr/lib/graphviz/&quot;_
+- Clone/Download the models library from github using the following command:
+  - _git clone --recursive https://github.com/tensorflow/models.git_
+- Version Compatibility is a huge issue in Syntaxnet Setup. Use the following commit id for bazel 0.5.2 to pass the bazel tests:
+  - _Go to models forlder_
+  - _git checkout _[_bc0edaf_](https://github.com/tensorflow/models/commit/bc0edaf8ec635c2a493a9303071e3d2fe97f3b7b)
+  - _git submodule update_
+  - _(commit id:bc0edaf8ec635c2a493a9303071e3d2fe97f3b7b)_
+- Go to models/research/syntaxnet/tensorflow
+- Run the following command:
+  - _./configure_
+- Come back to syntaxnet directory:
+  - _cd .._
+- Run the following commands for IOS:
+  - _bazel_ _test_ _--linkopt=-headerpad\_max\_install\_names \dragnn/... syntaxnet/... util/utf8/..._
+- Make a temporary directory:
+  - _mkdir /tmp/syntaxnet\_pkg_
+-  To install the tensorflow version compatible with the syntaxnet version you are installing, use the following command:
+  -
+    - _bazel-bin/dragnn/tools/build\_pip\_package --include-tensorflow –output-dir=/tmp/syntaxnet\_pkg__ _
+- Install syntaxnet:
+  - _sudo -H pip --no-cache-dir install /tmp/syntaxnet\_pkg/syntaxnet\_with\_tensorflow-0.2-whatever-your-config__uration-is.whl_
+- Installation is done.
+
+
 ## Usage
 
 ```python
