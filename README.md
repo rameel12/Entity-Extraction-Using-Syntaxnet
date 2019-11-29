@@ -1,4 +1,4 @@
-# Entity Extraction Using Syntacnet
+# Entity Extraction Using Syntaxnet
 
 
 
