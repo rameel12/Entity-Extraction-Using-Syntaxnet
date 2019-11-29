@@ -16,7 +16,9 @@ Trees built by syntaxnet are more accurate and in more detail. After analysis, w
 
 ## Prerequisites 
 Install [Syntaxnet](https://github.com/tensorflow/models/tree/master/research/syntaxnet)
+
 Pandas
+
 Numpy
 
 
