@@ -53,6 +53,10 @@ The entities recognized by model are&#39; VT100 Outbound files. VT100 Inbound fi
 
 As shown above, the accuracy of syntaxnet model seems to be above 90%.
 
+#Prerequisites 
+Install [Syntaxnet](https://github.com/tensorflow/models/tree/master/research/syntaxnet)
+Pandas
+Numpy
 
 
 **Syed Rameel Ahmad**
