@@ -14,8 +14,13 @@ Syntaxnet is the best available tool for dependency parsing. It is the research 
 
 Trees built by syntaxnet are more accurate and in more detail. After analysis, we decided to use these results and universal dependencies to find the required entities in our cases.
 
-After Data Analysis we built the following hypothesis:
+# Prerequisites 
+Install [Syntaxnet](https://github.com/tensorflow/models/tree/master/research/syntaxnet)
+Pandas
+Numpy
 
+
+# Logic
 - The label of a named entity will contain one of the following:
   -  &#39;sub&#39; (with an exception of csubj)&#39;,
   - &#39;ob&#39; (obl or obj) ,
@@ -27,7 +32,9 @@ After Data Analysis we built the following hypothesis:
   - Name (Name of a particular noun)
 - Conjunctions will result in multiple entities.
 
-Following are few results of Syntaxnet and Spacy
+# Results
+
+Following are few results of Syntaxnet comparied with Spacy Noun Chunks
 
 | **Text** | **Syntaxnet** | **Spacy** |
 | --- | --- | --- |
@@ -53,10 +60,6 @@ The entities recognized by model are&#39; VT100 Outbound files. VT100 Inbound fi
 
 As shown above, the accuracy of syntaxnet model seems to be above 90%.
 
-# Prerequisites 
-Install [Syntaxnet](https://github.com/tensorflow/models/tree/master/research/syntaxnet)
-Pandas
-Numpy
 
 
 **Syed Rameel Ahmad**
