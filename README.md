@@ -25,8 +25,9 @@ Numpy
 
 ```python
 import entity_extractor as ep
+
 s = ep.NER(" I work on 32 and 64 bit processor.")
-print s //prints the list of entities
+print s #prints the list of entities
 ```
 
 
