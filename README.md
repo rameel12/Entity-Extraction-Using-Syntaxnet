@@ -31,13 +31,7 @@ Following are few results of Syntaxnet and Spacy
 
 | **Text** | **Syntaxnet** | **Spacy** |
 | --- | --- | --- |
-| I work on **32 and 64 bit processor**. |
-- 32 bit processor
-- 64 bit processor
- |
-- I
-- 32 and 64 bit Processor
-  |
+| I work on **32 and 64 bit processor**. |32 bit processor,64 bit processor| I, 32 and 64 bit Processor|
 | Update **IBM HTTP Server** for i to comply with **security vulnerabilities CVE-2011-0419** and **CVE-2011-1928** to maintain **PCI compliance**. |
 - IBM HTTP Server
 - PCI compliance
