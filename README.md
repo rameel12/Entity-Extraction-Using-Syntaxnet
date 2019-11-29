@@ -22,18 +22,6 @@ Pandas
 Numpy
 
 
-## Logic
-- The label of a named entity will contain one of the following:
-  -  &#39;sub&#39; (with an exception of csubj)&#39;,
-  - &#39;ob&#39; (obl or obj) ,
-  - appos (technical noun description of text, usually mentioned in speech marks or brackets)
-  - nmod(Noun Modifier)
-- All modifiers of these words are not required except:
-  - Nummod(Numerical Modifier)
-  - Flat (Noun, describing a noun)
-  - Name (Name of a particular noun)
-- Conjunctions will result in multiple entities.
-
 ## Performance
 
 Following are few results of Syntaxnet comparied with Spacy Noun Chunks
