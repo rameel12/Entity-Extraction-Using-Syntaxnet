@@ -15,6 +15,9 @@ Syntaxnet is the best available tool for dependency parsing. It is the research 
 Trees built by syntaxnet are more accurate and in more detail. After analysis, we decided to use these results and universal dependencies to find the required entities in our cases.
 
 ## Prerequisites 
+
+Python 2.7 (Python 3. support is not available for Syntaxnet yet.)
+
 Install [Syntaxnet](https://github.com/tensorflow/models/tree/master/research/syntaxnet)
 
 Pandas
